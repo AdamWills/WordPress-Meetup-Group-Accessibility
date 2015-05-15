@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Web Accessibility - Hamilton WordPress Meetup Group</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h2>Accessiblity</h2>
+					<p>
+						<small>
+							By <a href="http://adamwills.com">Adam Wills</a> | <a href="https://twitter.com/heavymetaladam">@heavymetaladam</a>
+						</small>
+					</p>
+						<aside class="notes">
+							Notes examples
+						</aside>
+				</section>
+
+				<section>
+					
+					<h2>Who am I?</h2>
+
+					<ul>
+						<li class="fragment">Now: Web developer at Imagination Plus</li>
+						<li class="fragment">Then: Web developer at Norfolk County</li>
+						<li class="fragment">15+ years building websites</li>
+						<li class="fragment">6+ years working with WordPress</li>
+						<li class="fragment">5+ years working with accessibility</li>
+						<li class="fragment"><strong>NOT</strong> an accessibility expert</li>
+					</ul>
+
+					<aside class="notes">
+						- ask if anyone has any experience with a11y
+						- has anyone made any accessible websites?
+					</aside>
+
+
+				</section>
+
+				<section>
+
+					<section>
+						
+						<h2>Meet my brother, Dustin.</h2>
+
+						<img src="img/dustin.jpg" height="60%" width="60%"  alt="My brother, Dustin, wearing a Team Canada shirt">
+
+					</section>
+					
+					<section>
+						
+						<h2>So Dustin, what frustrates you about the web?</h2>
+
+						<blockquote class="fragment">"Most videos on the internet don't have closed captioning."</blockquote>
+						
+					</section>
+
+					<section>
+						
+						<h2>How does that make you feel?</h2>
+
+						<blockquote class="fragment">"Disappointed. I really want to understand what the video is about and what people are saying."</blockquote>
+
+					</section>
+
+					<section>
+						
+						<h2>An Alphabet of Accessibility Issues by Anne Gibson</h2>
+
+						<p><a href="https://the-pastry-box-project.net/anne-gibson/2014-july-31">the-pastry-box.net</a></p>
+
+						<aside class="notes">
+							<p>- not a set of personas - actual people known by the author of the post</p>
+						</aside>
+
+					</section>
+
+					<section>
+						
+						<h3>Meet B</h3>
+
+						<p class="fragment"><strong>B</strong> fell down a hill while running to close his car windows in the rain, and fractured multiple fingers. He’s trying to surf the web with his left hand and the keyboard.</p>
+
+						<footer>Source: <a href="https://the-pastry-box-project.net/anne-gibson/2014-july-31">the-pastry-box.net</a></footer>
+
+					</section>
+
+					<section>
+						
+						<h3>Meet M</h3>
+
+						<p class="fragment"><strong>M</strong> can’t consistently tell her left from her right. Neither can 15% of adults, according to some reports. Directions on the web that tell her to go to the top left corner of the screen don’t harm her, they just momentarily make her feel stupid.</p>
+
+						<footer>Source: <a href="https://the-pastry-box-project.net/anne-gibson/2014-july-31">the-pastry-box.net</a></footer>
+
+					</section>
+
+					<section>
+						
+						<h3>Meet Y</h3>
+
+						<p class="fragment"><strong>Y</strong> was in a car accident that left her with vertigo so severe that for a few weeks she couldn’t get out of bed. The symptoms have lessened significantly now, but that new parallax scrolling craze makes her nauseous to the point that she shuts scripting off on her computer.</p>
+
+						<footer>Source: <a href="https://the-pastry-box-project.net/anne-gibson/2014-july-31">the-pastry-box.net</a></footer>
+
+					</section>
+
+				</section>
+				
+				<section>
+
+					<section>
+						<h2>What is Accessibility?</h2>
+					</section>
+
+					<section>
+						<ul>
+							<li>Closed captioning?</li>
+							<li class="fragment">Alt tags? Aria roles?</li>
+							<li class="fragment">AODA? WCAG 2.0?</li>
+							<li class="fragment">Contrast and colours?</li>
+						</ul>
+
+					</section>
+
+					<section>
+						
+						<h3>Accessibility = access for everyone.</h3>
+					
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+					
+						<h2>AODA - Accessibility for Ontarians with Disabilities Act</h2>
+
+						<p>Enacted in 2005</p>
+
+					</section>
+
+					<section>
+						
+						<h2>January 1, 2014</h2>
+
+						<p>Any new public website or existing site that undergoes a significant refresh, the site and any of its web content published after January 1, 2012 must confirm to WCAG 2.0 Level A</p>
+
+					</section>
+
+					<section>
+						
+						<h2>January 1, 2021</h2>
+
+						<p>All public websites and all web content published after January 1, 2012 must conform with WCAG 2.0 Level AA (other than providing captions on live videos or audio descriptions for pre-recorded videos).</p>
+
+						<p>Content posted before 2012 will need to be provided in an accessible format on request.</p>
+
+					</section>
+
+					<section>
+						
+						<h2>Does this affect me?</h2>
+
+						<ul>
+
+							<li class="fragment">Public sector</li>
+
+							<li class="fragment">Private sector with 50+ employees</li>
+
+							<li class="fragment">But... <span class="fragment">it should.</span></li>
+
+							<aside class="notes">
+								
+								<p>World Health Organization study - 15% of the world's population has a disability</p>
+								<p>We cater more to IE8 users than those with accessibility needs</p>
+
+							</aside>	
+
+						</ul>
+
+					</section>
+
+				</section>
+				
+
+				<section>
+
+					<section>
+						
+						<h2>Is my website accessible?</h2>
+					
+					</section>
+
+					<section>
+						
+						<h3>Specs</h3>
+
+						<ul>
+							<li>Official - <a href="http://www.w3.org/TR/WCAG20/">w3.org</a></li>
+							<li>Unofficial (but easier to read) - <a href="http://webaim.org/standards/wcag/checklist">webaim.org</a></li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h3>Automated Testing</h3>
+						
+						<ul>
+							
+							<li>WAVE - <a href="http://wave.webaim.org/">WAVE (WebAim)</a></li>
+							
+							<li>AChecker - <a href="http://achecker.ca/">achecker.ca</a></li>
+
+							<li>Tenon.io (API) - <a href="http://tenon.io/">tenon.io</a></li>
+
+							<li class="fragment">But...</li>
+
+						</ul>
+
+					</section>
+
+					<section>
+						
+						<img src="img/automation.jpg" height="350" width="600" alt="Meme of Willy Wonka saying: You performed automated testing on your page? It must be fully successful!">
+
+					</section>
+
+					<section>
+
+						<h3>Some manual testing still needs to happen.</h3>
+
+						<ul>
+							
+							<li class="fragment">Keyboard navigation</li>
+							<li class="fragment">Colour and colour contrast (<a href="http://leaverou.github.io/contrast-ratio/">Lea Verou's Contrast Ratio tool</a>)</li>
+							<li class="fragment">Appropriate alt text</li>
+							<li class="fragment">Anything related to media</li>
+							<li class="fragment">And much more...</li>
+
+						</ul>
+					
+					</section>
+					
+				</section>
+
+				<section>
+
+					<section>
+						
+						<h2>So, how do I make my website accessible?</h2>
+						
+					</section>
+
+					<section>
+						
+						<h3>Non-Text Content</h3>
+
+						<ul>
+							
+							<li class="fragment">Form fields have labels (labels != placeholders)</li>
+							<li class="fragment">Images have alternate text (when needed)</li>
+							<li class="fragment">For complex images, provide a long-desc (another page will a full description)</li>
+
+						</ul>
+
+					</section>
+
+					<section>
+						
+						<h3>Alt Text</h3>
+				
+
+						<ul>
+							<li class="fragment">Be accurate and equivalent.</li>
+							<li class="fragment">Be succinct.</li>
+							<li class="fragment">NOT be redundant.</li>
+							<li class="fragment">NOT use the phrases "image of ..." or "graphic of ..." to describe the image.</li>
+						</ul>
+
+						<footer>
+								
+							<p>Source: <a href="http://webaim.org/techniques/alttext/">webaim.org</a></p>
+
+						</footer>
+
+						<aside class="notes">
+								
+							<ul>
+								<li>Present the same content and function of the image.</li>
+								<li>Typically no more than a few words are necessary, though rarely a short sentence or two may be appropriate.</li>
+								<li>Don't repeat the same information as text within the context of the image.</li>
+								<li><strong>NOT use the phrases "image of ..." or "graphic of ..." to describe the image.</strong> If the fact that an image is a photograph or illustration, etc. is important content, it may be useful to include this in alternative text.</li>
+							</ul>
+						
+						</aside>	
+
+					</section>
+
+					<section>
+						
+						<h3>Alt text test...</h3>
+
+						<a href="https://hamilton.wordcamp.org/2015/" target="_blank">WordCamp Hamilton 2015</a>
+
+
+					</section>
+
+					<section>
+						
+						<h3>Use Semantic HTML</h3>
+
+						<ul>
+							<li class="fragment">Use tables for tabular data</li>
+							<li class="fragment">Use proper heading structure</li>
+							<li class="fragment">Use lists for lists</li>
+						</ul>
+
+					</section>
+
+					<section>
+						
+						<h3>Forms</h3>
+
+						<ul>
+							<li class="fragment">Labels</li>
+							<li class="fragment">Keyboard accessible (including submission)</li>
+							<li class="fragment">Clear instructions</li>
+							<li class="fragment">Ensure error validation is clear and easy to fix</li>
+						</ul>
+
+						<aside class="notes">
+							labels - appropriate and linked
+							clear instructions - required fields
+							errors - ensure it's clear what the user did wrong, allow form to be corrected and re-submitted easily
+						</aside>
+
+					</section>
+
+					<section>
+						
+						<h3>Colour</h3>
+
+						<ul>
+							<li class="fragment">Don't use colour only to convey information.</li>
+							<li class="fragment">Don't use colour alone to distinguish links</li>
+							<li class="fragment">Text should have a contrast ratio of 4.5:1</li>
+						</ul>
+
+						<aside class="notes">
+							- click the red button (that's beside the green button)
+							- large text can be 3:1
+						</aside>
+
+					</section>
+
+					<section>
+						
+						<h3>Media</h3>
+
+						<ul>
+							<li class="fragment">Transcripts for audio</li>
+							<li class="fragment">Closed captioning and text transcript for video</li>
+							<li class="fragment">Accessible video/audio players</li>
+						</ul>
+
+						<aside class="notes">
+							<p>Some real SEO value with transcripts!</p>
+						</aside>
+
+					</section>
+
+					<section>
+						
+						<h3>...and more</h3>
+
+						<ul>
+							<li class="fragment">Keyboard navigable</li>
+							<li class="fragment">Allow extended timelines</li>
+							<li class="fragment">Avoid flashing content</li>
+							<li class="fragment">Skip Navigation links</li>
+							<li class="fragment">Aria roles</li>
+						</ul>
+
+						<aside class="notes">
+							
+							- time limit: carousels, countdowns, etc
+							- Accessible Rich Internet Applications (ARIA)
+							- special attributes that add additional info to html tags
+							- WP looks for: role="banner", "main", "complementary", "contentinfo", "search", "navigation"
+
+						</aside>
+
+					</section>
+					
+				</section>
+
+				<section>
+					
+					<section data-background="http://bukk.it/beaker-freak.gif">
+						
+						<h2>Accessibility is overwhelming!!</h2>
+
+						<br><br><br><br><br><br>
+
+					</section>
+
+					<section data-background="http://bukk.it/celebration.gif"> 
+						
+						<h2>But it doesn't have to be.</h2>
+
+						<div style="background-color: white; display: inline-block; padding: 0 1em;">
+							<img src="https://s.w.org/about/images/logos/wordpress-logo-hoz-rgb.png" alt="WordPress logo">
+						</div>
+					
+					</section>
+					
+				</section>
+
+				<section>
+					
+					<section>
+						
+						<h2>Accessibility and WordPress</h2>
+
+					</section>
+
+					<section>
+						
+						<h3>Themes</h3>
+
+						<ul>
+							<li class="fragment">Look for the "accessibility-ready" tag</li>
+							<li class="fragment">Roll your own</li>
+						</ul>
+
+						<aside class="notes">
+							- themes that use the tag accessibility-ready will undergo an accessibility review before made live
+						</aside>
+
+					</section>
+
+					<section>
+
+						<img src="http://www.wpuniversity.com/wp-content/uploads/2014/02/wordpress-plugins.jpg">
+
+					</section>
+
+					<section>
+						
+						<h3>WP Accessibility</h3>
+						<ul>
+							<li>Add skip links with user-defined targets. (Customizable targets and appearance.)</li>
+							<li>Add language and text direction attributes to your HTML attribute</li>
+							<li>Add an outline to the keyboard focus state for focusable elements.</li>
+							<li>Add a toolbar toggling between high contrast, large print, and desaturated (grayscale) views of your theme.</li>
+							<li>Add a long description to images. Use the image's "Description" field to add long descriptions.</li>
+							<li>Enforcement for alt attributes on images.</li>
+							<li>Remove the target attribute from links.</li>
+							<li>And much more...</li>
+						</ul>
+
+						<p><a href="https://wordpress.org/plugins/wp-accessibility/">https://wordpress.org/plugins/wp-accessibility/</a></p>
+
+					</section>
+
+					<section>
+						
+						<h3>Content</h3>
+
+						<ul>
+							<li class="fragment">Planning</li>
+							<li class="fragment">Training and Education</li>
+							<li class="fragment">Run an accessibility check!</li>
+						</ul>
+
+					</section>
+
+				</section>
+
+				<section>
+					
+					<h2>The difference accessibility makes</h2>
+
+					<p><a href="https://www.youtube.com/watch?v=ZZxr0snTp0k">Harry Potter website</a></p>
+
+				</section>
+				
+				<section>
+
+					<h2>But wait...</h2>
+
+					<p>There's more to accessibility than the guidelines.</p>
+
+					<p><img src="http://bukk.it/watmouse.gif"></p>
+
+					<p><a href="https://www.youtube.com/watch?v=bEM9Fn9aOG8">Web Accessibility - Department of Social Services - Australian Goverment</a></p>
+					
+				</section>
+
+				<section>
+
+					<section>
+						
+						<h2>The broader meaning of accessibility</h2>
+						
+					</section>
+					
+
+					<section>
+						
+						<h3>Can your site be easily viewed on all devices?</h3>
+
+						<ul>
+							<li class="fragment">Responsive?</li>
+							<li class="fragment">Mobile site?</li>
+							<li class="fragment">WP-Touch (<a href="http://www.wptouch.com/">wptouch.com</a>)</li>
+						</ul>
+
+					</section>
+
+					<section>
+						
+						<h3>How understandable is your content?</h3>
+
+						<ul>
+							<li><a href="http://read-able.com/check.php?uri=http%3A%2F%2Fhamilton.wordcamp.org%2F2015%2F">Read-able.com</a></li>
+							<li>Microsoft Word</li>
+							<li class="fragment">If you don’t know who your target audience is, target your content towards a reader between the ages of 12 and 15 years old *</li>
+						</ul>
+
+						<footer>
+							<p>Source: <a href="http://a11yproject.com/posts/check-comprehension-level/">a11yproject.com</a></p>
+						</footer>
+
+					</section>
+
+					<section>
+						
+						<h3>How much does your site cost?</h3>
+
+						<p><a href="http://whatdoesmysitecost.com/">whatdoesmysitecost.com</a></p>
+
+						<p class="fragment">According to the April 15, 2015 run of HTTP Archive, the average site now weighs 2061kb</p>
+
+						<aside class="notes">
+							Runs via webpagetest.com
+						</aside>
+
+					</section>
+
+					<section>
+
+						<h3>How much does your site cost? (cont'd)</h3>
+						
+						<table class="results">
+							<thead>
+								<tr>
+									<th>Country</th>
+									<th>Cost (in USD)</th>
+								</tr>
+							</thead>
+							<tbody>
+							<tr><td>Vanuatu</td><td><div style="width: 100%;">$0.66</div></td></tr>
+							<tr><td>Angola</td><td><div style="width: 47.536072389337%;">$0.31</div></td></tr>
+							<tr><td>Germany</td><td><div style="width: 38.273416483248%;">$0.25</div></td></tr>
+							<tr><td>Japan</td><td><div style="width: 33.8102225483%;">$0.22</div></td></tr>
+							<tr><td>Papua New Guinea</td><td><div style="width: 29.964539007092%;">$0.20</div></td></tr>
+							<tr><td>Ireland</td><td><div style="width: 28.411592076302%;">$0.19</div></td></tr>
+							<tr><td>Botswana</td><td><div style="width: 28.026412325752%;">$0.18</div></td></tr>
+							<tr><td>Canada</td><td><div style="width: 27.954403277085%;">$0.18</div></td></tr>
+							</tbody>
+						</table>
+					</section>
+
+				</section>
+
+				<section>
+					
+					<img src="img/karl.jpg" style="height: 60vh; width: auto;" alt="Steven Merchant: It's accessible by 11-hour trek through the mountains. Karl: That's not accessible, is it?">
+
+					<aside class="notes">
+						- Machu Pichu in Pero
+						- accessibility is about removing barriers
+						- dignity for users
+						- accessibility still needs leaders
+					</aside>
+
+				</section>
+
+				<section>
+					
+					<h2>How can I help?</h2>
+
+					<ul>
+						<li class="fragment">Make sure your website is accessible</li>
+						<li class="fragment">Be an organizational champion</li>
+						<li class="fragment">Educate your clients</li>
+						<li class="fragment">Educate your peers</li>
+						<li class="fragment">Contribute to the <a href="https://make.wordpress.org/accessibility/">WordPress Accessibility group</a></li>
+					</ul>
+
+				</section>
+				
+
+
+				<section>
+					
+					<h2>Resources</h2>
+
+					<ul>
+						<li><a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0 Guidelines</a></li>
+						<li><a href="http://webaim.org/">webaim.org</a></li>
+						<li><a href="http://wave.webaim.org/">WAVE</a> (Accessibility Checker)</li>
+						<li><a href="http://achecker.ca/">achecker.ca</a> (Accessibility Checker)</li>
+						<li><a href="http://tenon.io/">tenon.io</a> (Accessibility Checker)</li>
+						<li><a href="http://leaverou.github.io/contrast-ratio/">Lea Verou's Contrast Ratio tool</a></li>
+						<li><a href="https://make.wordpress.org/accessibility/">Make WordPress Accessible</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/">Mozilla Developer Network</a></li>
+						<li><a href="https://the-pastry-box-project.net/anne-gibson/2014-july-31">An Alphabet of Accessibility</a> by Anne Gibson</li>
+						<li><a href="https://wordpress.org/plugins/wp-accessibility/">WP Accessibility</a> - WordPress Plugin</li>
+						<li><a href="https://www.youtube.com/watch?v=ZZxr0snTp0k">Harry Potter website</a></li>
+						<li><a href="https://www.youtube.com/watch?v=bEM9Fn9aOG8">Web Accessibility</a> - Australian Goverment</li>
+						<li><a href="http://whatdoesmysitecost.com/">What Does My Site Cost?</a></li>
+					</ul>
+
+				</section>
+
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
