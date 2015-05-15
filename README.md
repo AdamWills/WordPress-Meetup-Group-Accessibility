@@ -1,20 +1,5 @@
-#A Modern WordPress Development Workflow
+#Accessibility Presentation
 
-* Environments - Vagrant
-** VVV
-** HHVM one
-** PuPHPet
+A presentation made at the Hamilton WordPress Meetup group on May 14, 2015.
 
-* Composer
-** Consistent versions among team
-* Starter Themes
-** _s, Roots, etc
-* Preprocessors
-** SASS
-** LESS
-* Task Runners
-** Grunt
-** Gulp
-* Deployment
-** Capistrano
-** CI??
+Made using Reveal.js
